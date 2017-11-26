@@ -8,10 +8,11 @@ spec:
       labels:
         app: miner
     spec:
-      tolerations:
-      - key: "node-role.kubernetes.io/master"
-        operator: "Exists"
-        effect: "NoSchedule"
+      # tolerations:
+      # - key: "node-role.kubernetes.io/master"
+      #   operator: "Exists"
+      #   effect: "NoSchedule"
       containers:
       - name: miner
         image: alexisvincent/miner
+        args: ["-c", "/etc/miner/config.json", "-t", "1"]
