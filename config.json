@@ -1,0 +1,17 @@
+{
+	"api-bind" : "127.0.0.1:4048",
+
+	"url" : "stratum+tcp://cryptonight.eu.nicehash.com:3355",
+        "user" : "1DodPqJqf8bHB6kVoQ4ifomDfJgSJ7ib8p",
+        "pass" : "x",
+        "algo" : "cryptonight",
+
+        "_comment1" : "number of CPU cores",
+        "threads" : 8,
+        "cpu-priority" : 5,
+
+	"benchmark" : false,
+	"debug" : false,
+	"protocol": false,
+	"quiet" : false
+}
