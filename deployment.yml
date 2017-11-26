@@ -1,0 +1,17 @@
+apiVersion: extensions/v1beta1
+kind: DaemonSet
+metadata:
+  name: miner
+spec:
+  template:
+    metadata:
+      labels:
+        app: miner
+    spec:
+      tolerations:
+      - key: "node-role.kubernetes.io/master"
+        operator: "Exists"
+        effect: "NoSchedule"
+      containers:
+      - name: miner
+        image: alexisvincent/miner
