@@ -1,7 +1,7 @@
 FROM debian
 
 RUN apt-get update
-RUN apt-get install build-essential libcurl4-openssl-dev git automake libtool libjansson* libncurses5-dev libssl-dev
+RUN apt-get install -y build-essential libcurl4-openssl-dev git automake libtool libjansson* libncurses5-dev libssl-dev
 RUN git clone --recursive https://github.com/tpruvot/cpuminer-multi.git
 RUN git checkout linux
 RUN ./autogen.sh
